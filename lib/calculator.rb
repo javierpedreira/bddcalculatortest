@@ -9,7 +9,7 @@ class Calculator
   end
 
   def clear
-    # FIXME
+    @mem = []
   end
 
   def add
@@ -18,18 +18,22 @@ class Calculator
   end
 
   def subtract
-    # FIXME
+    return unless @mem.size >= 2
+    @mem = [@mem[0] - @mem[1]]
   end
 
   def multiply
-    # FIXME
+    return unless @mem.size >= 2
+    @mem = [@mem[0] * @mem[1]]
   end
 
   def divide
-    # FIXME
+    return unless @mem.size >= 2
+    @mem = [@mem[0] / @mem[1]]
   end
 
   def pow
-    # FIXME
+    return unless @mem.size >= 2
+    @mem = [@mem[0] ** @mem[1]]
   end
 end
